@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- 1️⃣ 修改这里的标题 -->
+    <title>儿歌：鸟有翅膀</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            margin-top: 50px;
+            background-color: #f0f8ff;
+        }
+        .container {
+            max-width: 500px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        audio {
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 2️⃣ 修改这里的标题 -->
+        <h2>🎵 鸟有翅膀</h2>
+        <!-- 3️⃣ 将下面的MP3链接替换成你的Raw链接 -->
+        <audio id="myAudio" controls>
+            <source src="blob:https://github.com/80c03087-e859-4c68-b4f7-513ced5dc6d2" type="audio/mpeg">
+            您的浏览器不支持 audio 标签。
+        </audio>
+        <br>
+        <a href="#" id="downloadLink" class="download-btn">⬇️ 下载音频到本地 ⬇️</a>
+    </div>
+
+    <script>
+        // 这段JavaScript代码会自动将下载按钮的链接指向音频文件
+        const audioElement = document.getElementById('myAudio');
+        const downloadButton = document.getElementById('downloadLink');
+        
+        // 获取音频源文件的地址
+        const audioSrc = audioElement.querySelector('source').src;
+        
+        // 设置下载按钮的链接地址
+        downloadButton.href = audioSrc;
+    </script>
+</body>
+</html>
