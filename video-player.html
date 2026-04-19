@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!-- 1️⃣ 修改这里的标题，它会显示在浏览器标签栏上 -->
+    <title>儿歌：鸟有翅膀</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            text-align: center;
+            font-family: sans-serif;
+            margin-top: 50px;
+            background-color: #f0f8ff;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #333;
+        }
+        video {
+            width: 100%;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+        .download-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 2️⃣ 修改这里的标题 -->
+        <h2>🐦 鸟有翅膀</h2>
+        <!-- 3️⃣ 将下面的MP4链接替换成你的Raw链接 -->
+        <video id="myVideo" controls>
+            <source src="blob:https://github.com/6f0a7867-e66b-448f-81df-3bad2dea7084" type="video/mp4">
+            您的浏览器不支持 video 标签。
+        </video>
+        <br>
+        <a href="#" id="downloadLink" class="download-btn">⬇️ 下载视频到本地 ⬇️</a>
+    </div>
+
+    <script>
+        // 这段JavaScript代码会自动将下载按钮的链接指向视频文件
+        const videoElement = document.getElementById('myVideo');
+        const downloadButton = document.getElementById('downloadLink');
+        
+        // 获取视频源文件的地址
+        const videoSrc = videoElement.querySelector('source').src;
+        
+        // 设置下载按钮的链接地址
+        downloadButton.href = videoSrc;
+    </script>
+</body>
+</html>
