@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>鸟有翅膀 - 视频+音频</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        body {
+            font-family: sans-serif;
+            background: #f5f7fa;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 24px;
+            padding: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .media-section {
+            margin-bottom: 32px;
+            border-bottom: 1px solid #eaeef2;
+            padding-bottom: 24px;
+        }
+        .media-section:last-child {
+            border-bottom: none;
+        }
+        h3 {
+            color: #2c7da0;
+            margin-bottom: 12px;
+        }
+        video, audio {
+            width: 100%;
+            border-radius: 12px;
+            margin-bottom: 12px;
+        }
+        .download-btn {
+            display: inline-block;
+            background-color: #2c7da0;
+            color: white;
+            padding: 8px 20px;
+            text-decoration: none;
+            border-radius: 40px;
+            font-size: 14px;
+            margin-right: 12px;
+            margin-top: 8px;
+        }
+        .download-btn:hover {
+            background-color: #1f5e7a;
+        }
+        .note {
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2>🐦 鸟有翅膀</h2>
+
+    <!-- 视频部分 -->
+    <div class="media-section">
+        <h3>🎬 视频</h3>
+        <!-- 将 src 中的文件名改为你的实际视频文件名（包括扩展名，如 .mp4） -->
+        <video id="myVideo" controls preload="metadata">
+            <source src="video-niaoyouchibang.mp4" type="video/mp4">
+            您的浏览器不支持 video 标签。
+        </video>
+        <br>
+        <!-- 下载链接指向同一个视频文件 -->
+        <a href="video-niaoyouchibang.mp4" download class="download-btn">⬇️ 下载视频</a>
+    </div>
+
+    <!-- 音频部分 -->
+    <div class="media-section">
+        <h3>🎵 音频</h3>
+        <!-- 将 src 中的文件名改为你的实际音频文件名（如 audio-niaoyouchibang.mp3） -->
+        <audio id="myAudio" controls preload="metadata">
+            <source src="song-niaoyouchibang.mp3" type="audio/mpeg">
+            您的浏览器不支持 audio 标签。
+        </audio>
+        <br>
+        <a href="audio-niaoyouchibang.mp3" download class="download-btn">⬇️ 下载音频</a>
+    </div>
+
+    <div class="note">
+        👆 点击播放按钮在线观看/收听，点击下载按钮保存文件到本地。
+    </div>
+</div>
+</body>
+</html>
